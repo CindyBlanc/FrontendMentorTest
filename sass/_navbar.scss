@@ -7,6 +7,16 @@ body {
             flex-direction: row;
             list-style: none;
             justify-content: space-evenly;
+            li{
+                margin-right: 20px;
+                a{
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+            :hover{
+                border-bottom: 1px solid black;
+            }
 
         }
 
