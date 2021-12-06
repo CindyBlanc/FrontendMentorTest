@@ -1,0 +1,25 @@
+body {
+  background-color: white;
+  font-family: "Spartan";
+}
+body article {
+  display: flex;
+  flex-direction: row;
+}
+
+@font-face {
+  font-family: "Spartan";
+  src: url("../font/Spartan-VariableFont_wght.ttf");
+}
+body nav {
+  display: flex;
+  flex-direction: row;
+}
+body nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+/*# sourceMappingURL=style.css.map */

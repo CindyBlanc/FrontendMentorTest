@@ -1,0 +1,14 @@
+body {
+    nav{
+        display: flex;
+        flex-direction: row;
+        ul{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-evenly;
+
+        }
+
+    }    
+}
