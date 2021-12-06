@@ -1,5 +1,6 @@
 body {
   background-color: plum;
+  width: 100%;
   font-family: "Spartan";
   margin: auto;
   color: #a1a1a1;
@@ -7,18 +8,42 @@ body {
 body h2 {
   color: black;
 }
+body h3 {
+  color: black;
+}
 body a {
   color: inherit;
   text-decoration: none;
 }
 body article {
+  width: 100%;
   padding-top: 20px;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+}
+body article .img1Article {
+  grid-column: 1;
+}
+body article .img1Article img {
+  width: 100%;
 }
 body article .detailArticle {
-  padding: 15px;
+  padding: 20px 20px 0 20px;
   text-align: left;
+  grid-column: 2;
+}
+body article .img2Article {
+  grid-column: 3;
+}
+body article .img2Article img {
+  width: 100%;
+}
+body footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+body footer .attribution a {
+  color: #3e52a3;
 }
 
 @font-face {
@@ -28,8 +53,14 @@ body article .detailArticle {
 body nav {
   display: flex;
   flex-direction: row;
-  margin: 30px;
+  margin: 60px 0 0 60px;
   color: white;
+}
+body nav .logo {
+  vertical-align: middle;
+}
+body nav .logo img {
+  height: 1rem;
 }
 body nav ul {
   display: flex;
@@ -37,32 +68,108 @@ body nav ul {
   list-style: none;
   justify-content: space-evenly;
   text-align: center;
+  margin: 0;
 }
 body nav ul li {
   margin-right: 20px;
+}
+body nav ul li a {
+  text-decoration: none;
 }
 body nav ul :hover {
   border-bottom: 2px solid black;
 }
 
-body .slider .slides .slide {
+body .container *, body .container ::before, body .container ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body .container body {
+  background: #f1f1f1;
+}
+body .container .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+}
+body .container .slider img {
+  max-width: 100%;
+  display: none;
+}
+body .container img.active {
+  display: block;
+  animation: fade 0.8s;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body .container .cont-btn {
+  width: 100%;
+  height: auto;
+  border: 1px solid #000;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   display: flex;
-  flex-direction: row;
+  justify-content: center;
 }
-body .btnSlider {
-  display: flex;
-  flex-direction: row;
+body .container .btn-nav {
+  font-size: 50px;
+  margin: 0 15px;
+  cursor: pointer;
 }
-body .btnSlider .containerBtn {
-  background-color: black;
-  width: 50px;
-  height: 50px;
+
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
 }
-body .btnSlider .containerBtn svg {
-  position: center;
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
 }
-body .btnSlider :hover {
-  background-color: #454545;
+
+.item1 {
+  grid-column: 1/span 2;
+  grid-row: 1/span 2;
+}
+
+.item2 {
+  grid-column: 3/span 2;
+  grid-row: 1;
+  height: 100px;
+}
+
+.item6 {
+  grid-column: 3;
+  grid-row: 2;
+  height: 20px;
+}
+
+.item7 {
+  grid-column: 4;
+  grid-row: 2;
+  height: 20px;
+}
+
+.item3 {
+  grid-column: 1;
+}
+
+.item4 {
+  grid-column: 2/span 2;
+}
+
+.item5 {
+  grid-column: 4;
 }
 
 /*# sourceMappingURL=style.css.map */

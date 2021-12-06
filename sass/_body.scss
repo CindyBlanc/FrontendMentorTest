@@ -1,9 +1,13 @@
 body{
     background-color: plum;
+    width: 100%;
     font-family: 'Spartan';
     margin: auto;
     color: hsl(0, 0%, 63%);
     h2{
+        color: black;
+    }
+    h3{
         color: black;
     }
     a{
@@ -11,13 +15,37 @@ body{
         text-decoration: none;
     }
     article{
+        width: 100%;
         padding-top: 20px;
-        display: flex;
-        flex-direction: row;
-            .detailArticle{
-                padding: 15px;
-                text-align: left;
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+
+        .img1Article{
+            grid-column: 1;
+            img{
+                width: 100%;
             }
+        }
+        .detailArticle{
+            padding: 20px 20px 0 20px;
+            text-align: left;
+            grid-column: 2;
+
+        }
+        .img2Article{
+            grid-column: 3;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    footer{
+        .attribution{
+           font-size: 11px; 
+           text-align: center; 
+           a { 
+               color: hsl(228, 45%, 44%); }
+        }
     }
 
 }
