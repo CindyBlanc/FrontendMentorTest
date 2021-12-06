@@ -2,20 +2,19 @@ body {
     nav{
         display: flex;
         flex-direction: row;
+        margin: 30px;
+        color: hsl(0, 0%, 100%);
         ul{
             display: flex;
             flex-direction: row;
             list-style: none;
             justify-content: space-evenly;
+            text-align: center;
             li{
                 margin-right: 20px;
-                a{
-                    text-decoration: none;
-                    color: inherit;
-                }
             }
             :hover{
-                border-bottom: 1px solid black;
+                border-bottom: 2px solid black;
             }
 
         }
