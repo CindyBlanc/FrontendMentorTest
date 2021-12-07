@@ -1,53 +1,75 @@
-.container{
-    position:absolute;
-    top: 0;
-    z-index: -1;
-    width: 100%;
-  }
-  img{
-    width: 100%;
-  }
-.grid-container {
-    display: grid;
-  }
-  
-  .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  
-  .item1 {
-    grid-column: 1/ span 2 ;
-    grid-row: 1 / span 2;
-  
-  }
-  
-  .item2 {
-    grid-column: 3 / span 2;
-    grid-row: 1 ;
-    height: 100px;
-  }
-  
-  .item6 {
-    grid-column: 3 ;
-    grid-row: 2 ;
-    height: 20px;
-    background-color: black;
-  
-  }
-  .item7 {
-    grid-column: 4 ;
-    grid-row: 2 ;
-    height: 20px;
-  
-  }
-  
-  
-  .item3 {
-    grid-column: 1 ;
-  }
-  .item4 {
-    grid-column: 2 / span 2 ;
-  }
-  .item5 {
-    grid-column: 4 ;
-  }
+body{
+    position: relative;
+    .container{
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        display: flex;
+        flex-direction: row;
+    }
+
+    form {
+        padding: 30px;
+        background-color: white;
+        border-radius: 10px;
+      }
+
+
+      form .corps-formulaire {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+      }
+      form .corps-formulaire .groupe {
+        position: relative;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      form .corps-formulaire .gauche .groupe input {
+        margin-top: 5px;
+        padding: 10px 5px 10px 30px;
+        border: 1px solid #c9c9c9;
+        outline-color: hsl(0, 0%, 63%);
+        border-radius: 5px;
+      }
+      form .corps-formulaire .gauche .groupe i {
+        position: absolute; /* positionné par rapport à son parent le plus proche positionné */
+        left: 0;
+        top: 25px;
+        padding: 9px 8px;
+        color: hsl(0, 0%, 27%);
+      }
+      form .corps-formulaire .droite {
+        margin-left: 40px;
+      }
+      form .corps-formulaire .droite .groupe {
+        height: 100%;
+      }
+      form .corps-formulaire .droite .groupe textarea {
+        margin-top: 5px;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border: 2px solid hsl(0, 0%, 63%);
+        outline: none;
+        border-radius: 5px;
+        resize: none;
+        height: 72%;
+      }
+      form .pied-formulaire button {
+        margin-top: 10px;
+        background-color: hsl(0, 0%, 63%);
+        color: white;
+        font-size: 15px;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        transition: transform 0.5s;
+      }
+      form .pied-formulaire button:hover {
+        transform: scale(1.05);
+      }
+
+}

@@ -1,15 +1,21 @@
 body{
     background-color: hsl(0, 0%, 100%);
-    width: 100%;
     font-family: 'Spartan';
-    margin: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
     color: hsl(0, 0%, 63%);
+    position: relative;
     h2{
         color: black;
-    }
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 4px;
+        }
     h3{
         color: black;
         text-transform: uppercase;
+        letter-spacing: 4px;
     }
     a{
         color: inherit;
@@ -38,13 +44,85 @@ body{
             }
         }
     }
-    footer{
-        .attribution{
-           font-size: 11px; 
-           text-align: center; 
-           a { 
-               color: hsl(228, 45%, 44%); }
+
+    .ContainerGrid{
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 30% 14% 13% 10% 33%;
+        grid-template-rows: 59% 7% 33%;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        .itemGridImgSlide{
+            grid-column: 1 / span 3;
+            grid-row: 1 / span 2;
+
         }
+        .itemGridTextSlide{
+            grid-column: 4 / span 2;
+            grid-row: 1 / span 2;
+            .textSlide{
+                padding: 80px 80px 0 80px;
+                .link{
+                  a{
+                    display: flex;
+                    align-items: center;
+                    text-transform: uppercase;
+                    color: black;
+                    p{
+                      padding-right: 20px;
+                    }
+                  }
+    
+                }
+              }
+        }
+        .itemGridArrowSlide{
+            grid-column: 4 / span 1;
+            grid-row: 2;
+            position: relative;
+            .ArrowContainer{
+                display: flex;
+                position: absolute;
+                bottom: 0;
+                background-color: black;
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+        .itemGridImg1Article{
+            grid-column: 1;
+            grid-row: 3;
+        }
+        .itemGridTextArticle{
+            grid-column: 2 / span 3;
+            grid-row: 3;
+            .textArticle{
+                padding: 8% 10% 0 10%;
+                p{
+                    margin: 0;
+                }
+            }
+        }  
+        .itemGridImg2Article{
+            grid-column: 5;
+            grid-row: 3;
+        }      
     }
+
+
+
+
+
+    // footer{
+    //     .attribution{
+    //        font-size: 11px; 
+    //        text-align: center; 
+    //        a { 
+    //            color: hsl(228, 45%, 44%); }
+    //     }
+    // }
 
 }
