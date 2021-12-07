@@ -2,7 +2,7 @@
 body {
   background-color: white;
   font-family: "Spartan";
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
   padding: 0;
   color: #a1a1a1;
@@ -47,7 +47,6 @@ body article .img2Article img {
   width: 100%;
 }
 body .ContainerGrid {
-  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 30% 14% 13% 10% 33%;
@@ -71,10 +70,14 @@ body .ContainerGrid .itemGridTextSlide .textSlide .link a {
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  color: black;
+  color: #a1a1a1;
 }
 body .ContainerGrid .itemGridTextSlide .textSlide .link a p {
   padding-right: 20px;
+  letter-spacing: 10px;
+}
+body .ContainerGrid .itemGridTextSlide .textSlide .link a svg {
+  color: #a1a1a1;
 }
 body .ContainerGrid .itemGridArrowSlide {
   grid-column: 4/span 1;
@@ -99,9 +102,6 @@ body .ContainerGrid .itemGridTextArticle {
 }
 body .ContainerGrid .itemGridTextArticle .textArticle {
   padding: 8% 10% 0 10%;
-}
-body .ContainerGrid .itemGridTextArticle .textArticle p {
-  margin: 0;
 }
 body .ContainerGrid .itemGridImg2Article {
   grid-column: 5;
@@ -214,6 +214,25 @@ body form .pied-formulaire button {
 }
 body form .pied-formulaire button:hover {
   transform: scale(1.05);
+}
+
+@media screen and (max-width: 380px) {
+  body {
+    background-color: aqua;
+    width: 100%;
+  }
+  body h2 {
+    font-size: 17px;
+  }
+  body h3 {
+    font-size: 12px;
+  }
+  body .ContainerGrid {
+    display: inherit;
+  }
+  body .ContainerGrid .itemGridTextSlide .textSlide {
+    padding: 30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

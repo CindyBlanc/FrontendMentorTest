@@ -1,7 +1,7 @@
 body{
     background-color: hsl(0, 0%, 100%);
     font-family: 'Spartan';
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
     color: hsl(0, 0%, 63%);
@@ -46,7 +46,6 @@ body{
     }
 
     .ContainerGrid{
-        width: 100%;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 30% 14% 13% 10% 33%;
@@ -69,9 +68,13 @@ body{
                     display: flex;
                     align-items: center;
                     text-transform: uppercase;
-                    color: black;
+                    color: hsl(0, 0%, 63%);
                     p{
                       padding-right: 20px;
+                      letter-spacing: 10px;
+                    }
+                    svg{
+                        color: hsl(0, 0%, 63%);
                     }
                   }
     
@@ -101,9 +104,6 @@ body{
             grid-row: 3;
             .textArticle{
                 padding: 8% 10% 0 10%;
-                p{
-                    margin: 0;
-                }
             }
         }  
         .itemGridImg2Article{
