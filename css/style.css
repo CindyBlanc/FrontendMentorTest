@@ -82,15 +82,21 @@ body .ContainerGrid .itemGridTextSlide .textSlide .link a svg {
 body .ContainerGrid .itemGridArrowSlide {
   grid-column: 4/span 1;
   grid-row: 2;
-  position: relative;
-}
-body .ContainerGrid .itemGridArrowSlide .ArrowContainer {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  background-color: black;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+body .ContainerGrid .itemGridArrowSlide .arrow {
+  position: relative;
+  background-color: black;
+  width: 50%;
+  height: 100%;
+}
+body .ContainerGrid .itemGridArrowSlide .arrow svg {
+  position: absolute;
+  top: 30%;
+  right: 40%;
 }
 body .ContainerGrid .itemGridImg1Article {
   grid-column: 1;
