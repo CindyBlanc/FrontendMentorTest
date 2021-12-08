@@ -222,6 +222,19 @@ body form .pied-formulaire button:hover {
   transform: scale(1.05);
 }
 
+body {
+  position: relative;
+}
+body .containerAbout {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+body .containerVideo {
+  text-align: center;
+  padding-top: 25vh;
+}
+
 @media screen and (max-width: 380px) {
   body {
     background-color: aqua;
