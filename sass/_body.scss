@@ -21,47 +21,28 @@ body{
         color: inherit;
         text-decoration: none;
     }
-    article{
-        width: 100%;
-        display: grid;
-        padding: 0;
-        .img1Article{
-            grid-column: 1;
-            img{
-                width: 100%;
-            }
-        }
-        .detailArticle{
-            padding: 20px 20px 0 20px;
-            text-align: left;
-            grid-column: 2 / span 2;
-        }
-        .img2Article{
-            grid-column: 4;
-            img{
-                padding: 0;
-                width: 100%;
-            }
-        }
-    }
-
-    .ContainerGrid{
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 30% 14% 13% 10% 33%;
-        grid-template-rows: 59% 7% 33%;
+    .container2{
         position: absolute;
         top: 0;
         z-index: -1;
-        .itemGridImgSlide{
-            grid-column: 1 / span 3;
-            grid-row: 1 / span 2;
-
-        }
-        .itemGridTextSlide{
-            grid-column: 4 / span 2;
-            grid-row: 1 / span 2;
-            .textSlide{
+        .gridContainer{
+            display: grid;
+            width: 100%;
+            grid-template-areas: "imgSlider imgSlider textSlider textSlider"
+                                 "img1Article  text2Article text2Article img2Article";
+            grid-template-rows: 70% 30%;
+            grid-template-columns: 30% 30% 10% 30% ;            
+            .imgSlider2{
+                grid-area: imgSlider;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .textSlider2{
+                grid-area: textSlider;
+                position: relative;
+                .text2{
                 padding: 80px 80px 0 80px;
                 .link{
                   a{
@@ -80,46 +61,40 @@ body{
     
                 }
               }
-        }
-        .itemGridArrowSlide{
-            grid-column: 4 / span 1;
-            grid-row: 2;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: row;
-                .arrow{
-                    position: relative;
-                    background-color: black;
-                    width: 50%;
-                    height: 100%;
-                    svg{
-                        position: absolute;
-                        top: 30%;
-                        right: 40%;
+                .arrow2{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    display: flex;
+                    flex-direction: row;
+                    width: 25%;
+                    .arrow{
+                        background-color: black;
+                        width: 100px;
+                        height: 50px;
+                        text-align: center;
                     }
                 }
-
-        }
-        .itemGridImg1Article{
-            grid-column: 1;
-            grid-row: 3;
-        }
-        .itemGridTextArticle{
-            grid-column: 2 / span 3;
-            grid-row: 3;
-            .textArticle{
+            }
+            .img1Article2{
+                grid-area: img1Article;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .text2Article2{
+                grid-area: text2Article;
                 padding: 8% 10% 0 10%;
             }
-        }  
-        .itemGridImg2Article{
-            grid-column: 5;
-            grid-row: 3;
-        }      
+            .img2Article2{
+                grid-area: img2Article;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+        }
     }
-
-
-
-
-
 }

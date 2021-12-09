@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 body {
   background-color: white;
   font-family: "Spartan";
@@ -23,130 +24,205 @@ body a {
   color: inherit;
   text-decoration: none;
 }
-body article {
-  width: 100%;
-  display: grid;
-  padding: 0;
-}
-body article .img1Article {
-  grid-column: 1;
-}
-body article .img1Article img {
-  width: 100%;
-}
-body article .detailArticle {
-  padding: 20px 20px 0 20px;
-  text-align: left;
-  grid-column: 2/span 2;
-}
-body article .img2Article {
-  grid-column: 4;
-}
-body article .img2Article img {
-  padding: 0;
-  width: 100%;
-}
-body .ContainerGrid {
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 30% 14% 13% 10% 33%;
-  grid-template-rows: 59% 7% 33%;
+body .container2 {
   position: absolute;
   top: 0;
   z-index: -1;
 }
-body .ContainerGrid .itemGridImgSlide {
-  grid-column: 1/span 3;
-  grid-row: 1/span 2;
+body .container2 .gridContainer {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "imgSlider imgSlider textSlider textSlider" "img1Article  text2Article text2Article img2Article";
+  grid-template-rows: 70% 30%;
+  grid-template-columns: 30% 30% 10% 30%;
 }
-body .ContainerGrid .itemGridTextSlide {
-  grid-column: 4/span 2;
-  grid-row: 1/span 2;
+body .container2 .gridContainer .imgSlider2 {
+  grid-area: imgSlider;
 }
-body .ContainerGrid .itemGridTextSlide .textSlide {
+body .container2 .gridContainer .imgSlider2 img {
+  width: 100%;
+  height: 100%;
+}
+body .container2 .gridContainer .textSlider2 {
+  grid-area: textSlider;
+  position: relative;
+}
+body .container2 .gridContainer .textSlider2 .text2 {
   padding: 80px 80px 0 80px;
 }
-body .ContainerGrid .itemGridTextSlide .textSlide .link a {
+body .container2 .gridContainer .textSlider2 .text2 .link a {
   display: flex;
   align-items: center;
   text-transform: uppercase;
   color: #a1a1a1;
 }
-body .ContainerGrid .itemGridTextSlide .textSlide .link a p {
+body .container2 .gridContainer .textSlider2 .text2 .link a p {
   padding-right: 20px;
   letter-spacing: 10px;
 }
-body .ContainerGrid .itemGridTextSlide .textSlide .link a svg {
+body .container2 .gridContainer .textSlider2 .text2 .link a svg {
   color: #a1a1a1;
 }
-body .ContainerGrid .itemGridArrowSlide {
-  grid-column: 4/span 1;
-  grid-row: 2;
-  width: 100%;
-  height: 100%;
+body .container2 .gridContainer .textSlider2 .arrow2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
+  width: 25%;
 }
-body .ContainerGrid .itemGridArrowSlide .arrow {
-  position: relative;
+body .container2 .gridContainer .textSlider2 .arrow2 .arrow {
   background-color: black;
-  width: 50%;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+}
+body .container2 .gridContainer .img1Article2 {
+  grid-area: img1Article;
+}
+body .container2 .gridContainer .img1Article2 img {
+  width: 100%;
   height: 100%;
 }
-body .ContainerGrid .itemGridArrowSlide .arrow svg {
-  position: absolute;
-  top: 30%;
-  right: 40%;
-}
-body .ContainerGrid .itemGridImg1Article {
-  grid-column: 1;
-  grid-row: 3;
-}
-body .ContainerGrid .itemGridTextArticle {
-  grid-column: 2/span 3;
-  grid-row: 3;
-}
-body .ContainerGrid .itemGridTextArticle .textArticle {
+body .container2 .gridContainer .text2Article2 {
+  grid-area: text2Article;
   padding: 8% 10% 0 10%;
 }
-body .ContainerGrid .itemGridImg2Article {
-  grid-column: 5;
-  grid-row: 3;
+body .container2 .gridContainer .img2Article2 {
+  grid-area: img2Article;
+}
+body .container2 .gridContainer .img2Article2 img {
+  width: 100%;
+  height: 100%;
 }
 
 @font-face {
   font-family: "Spartan";
   src: url("../font/Spartan-VariableFont_wght.ttf");
 }
-body nav {
-  display: flex;
-  flex-direction: row;
+.nav {
+  height: 50px;
+  width: 100%;
+  position: relative;
   padding: 60px 0 0 60px;
-  color: white;
-  z-index: 0;
+  color: #fff;
 }
-body nav .logo {
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  padding: 10px 10px 10px 10px;
   vertical-align: middle;
-}
-body nav .logo img {
-  height: 1rem;
-}
-body nav ul {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  justify-content: space-evenly;
-  text-align: center;
-  margin: 0;
-}
-body nav ul li {
   margin-right: 20px;
 }
-body nav ul li a {
-  text-decoration: none;
+.nav > .nav-header > .nav-title img {
+  height: 1rem;
 }
-body nav ul li :hover {
-  border-bottom: 1px solid white;
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  border-bottom: 2px solid white;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+html {
+  border-top: 5px solid #fff;
+  background: #58DDAF;
+  color: #2a2a2a;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans";
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+}
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 300px;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px;
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
 }
 
 body {
@@ -237,7 +313,6 @@ body .containerVideo {
 
 @media screen and (max-width: 380px) {
   body {
-    background-color: aqua;
     width: 100%;
   }
   body h2 {
@@ -246,11 +321,51 @@ body .containerVideo {
   body h3 {
     font-size: 12px;
   }
-  body .ContainerGrid {
-    display: inherit;
+  body .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
   }
-  body .ContainerGrid .itemGridTextSlide .textSlide {
-    padding: 30px;
+  body .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  body .nav > .nav-btn > label:hover, body .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  body .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  body .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  body .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  body .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  body .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+  body .container2 .gridContainer {
+    display: inherit;
   }
 }
 
