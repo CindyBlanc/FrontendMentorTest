@@ -22,7 +22,9 @@
             height: 1rem;
         }
   }
-  
+  .nav .nav-links .nav-btn .nav-check .label{
+    display: none;
+  }
   .nav > .nav-btn {
     display: none;
   }
@@ -33,7 +35,7 @@
   
   .nav > .nav-links > a {
     display: inline-block;
-    padding: 13px 10px 13px 10px;
+    padding-top: 40px;
     text-decoration: none;
     color: #efefef;
   }
@@ -45,3 +47,4 @@
   .nav > #nav-check {
     display: none;
   }
+
