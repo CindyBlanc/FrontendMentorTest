@@ -24,7 +24,7 @@
         // mediaquery for navbar
           .nav{
             text-align: center;
-            padding: 20px 0 0 0px;
+            padding: 20px 0 0 0;
           }
             .nav > .nav-btn {
               display: inline-block;
@@ -78,6 +78,7 @@
               color: black;
               font-size:10px;
               font-weight: bold;
+              margin: inherit;
               margin: 0px 30px 0 0;
 
 
