@@ -21,6 +21,32 @@
           right: 0;
           left: auto;
         }
+        .container{
+          width: 100%;
+          flex-direction: column;
+          .imgContact{
+            img{
+              width: 100%;
+            }
+          }
+        }
+        .containerAbout{
+          .imgContact{
+            width: 100%;
+            img{
+              width: 100%;
+            }
+          }
+          .containerVideo{
+            width: 100%;
+            .iframeAbout{
+              iframe{
+                width: auto;
+              }
+
+            }
+          }
+        }
         // mediaquery for navbar
           .nav{
             text-align: center;

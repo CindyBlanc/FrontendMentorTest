@@ -279,6 +279,25 @@ body .containerVideo {
     right: 0;
     left: auto;
   }
+  body .container {
+    width: 100%;
+    flex-direction: column;
+  }
+  body .container .imgContact img {
+    width: 100%;
+  }
+  body .containerAbout .imgContact {
+    width: 100%;
+  }
+  body .containerAbout .imgContact img {
+    width: 100%;
+  }
+  body .containerAbout .containerVideo {
+    width: 100%;
+  }
+  body .containerAbout .containerVideo .iframeAbout iframe {
+    width: auto;
+  }
   body .nav {
     text-align: center;
     padding: 20px 0 0 0;
